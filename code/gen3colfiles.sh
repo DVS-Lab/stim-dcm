@@ -24,7 +24,7 @@ sub=$1
 for task in cardgame rest; do
 	for run in 3 2 1; do
   			input=/ZPOOL/data/projects/stim-dcm/bids/sub-${sub}/func/sub-${sub}_task-${task}_run-0${run}_events.tsv
-  			output=${baseout}/sub-${sub}/${task}
+  			output=${baseout}/sub-${sub}/${task}/run-${run}
 			mkdir -p $output
   			if [ -e $input ]; then
     			bash ${scriptdir}/BIDSto3col.sh $input ${output}/
