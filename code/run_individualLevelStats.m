@@ -1174,4 +1174,7 @@ for jj=1:length(nums)
     matlabbatch{1}.spm.stats.con.consess{9}.tcon.weights = [1 -1 -1 1];
     matlabbatch{1}.spm.stats.con.consess{9}.tcon.sessrep = 'repl';
     matlabbatch{1}.spm.stats.con.delete = 1;
+    matlabbatch{2}.spm.stats.fmri_est.spmmat = {'/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-'+nums(jj)+'/1stlevel/SPM.mat'};
+    matlabbatch{2}.spm.stats.fmri_est.write_residuals = 0;
+    matlabbatch{2}.spm.stats.fmri_est.method.Classical = 1;
 end
