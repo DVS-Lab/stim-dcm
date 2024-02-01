@@ -8,7 +8,8 @@
 
 
 %% Code for stats:
-nums = string(189:1:238);
+% nums = string(189:1:238);
+nums = "238";
 file_nums_for_subjects = string(zeros(size(length(nums))));
 for jj=1:length(nums)
     matlabbatch{1}.spm.stats.fmri_spec.dir = {'/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-'+nums(jj)+'/1stlevel'};
@@ -286,7 +287,6 @@ for jj=1:length(nums)
     opts = delimitedTextImportOptions("NumVariables", 3);
 
     % Specify range and delimiter
-    opts.DataLines = dataLines;
     opts.Delimiter = "\t";
     
     % Specify column names and types
@@ -313,7 +313,6 @@ for jj=1:length(nums)
     opts = delimitedTextImportOptions("NumVariables", 3);
 
     % Specify range and delimiter
-    opts.DataLines = dataLines;
     opts.Delimiter = "\t";
     
     % Specify column names and types
@@ -339,7 +338,6 @@ for jj=1:length(nums)
     opts = delimitedTextImportOptions("NumVariables", 3);
 
     % Specify range and delimiter
-    opts.DataLines = dataLines;
     opts.Delimiter = "\t";
     
     % Specify column names and types
@@ -366,7 +364,6 @@ for jj=1:length(nums)
     opts = delimitedTextImportOptions("NumVariables", 3);
 
     % Specify range and delimiter
-    opts.DataLines = dataLines;
     opts.Delimiter = "\t";
     
     % Specify column names and types
@@ -386,6 +383,9 @@ for jj=1:length(nums)
     matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(4).orth = 1;
     matlabbatch{1}.spm.stats.fmri_spec.sess(1).multi = {''};
     matlabbatch{1}.spm.stats.fmri_spec.sess(1).regress = struct('name', {}, 'val', {});
+    confounds_run1 = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-"+nums(jj)+'/sub-'+nums(jj)+"_task-cardgame_run-1_desc-fslConfounds.tsv";
+    save_dir_run1 = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-"+nums(jj)+"/sub-"+nums(jj)+"_task-cardgame_run-1_desc-fslConfounds";
+    tsvtom(confounds_run1, save_dir_run1);
     matlabbatch{1}.spm.stats.fmri_spec.sess(1).multi_reg = {'/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-'+nums(jj)+'/sub-'+nums(jj)+'_task-cardgame_run-1_desc-fslConfounds.mat'};
     matlabbatch{1}.spm.stats.fmri_spec.sess(1).hpf = 128;
     %%
@@ -657,7 +657,6 @@ for jj=1:length(nums)
     opts = delimitedTextImportOptions("NumVariables", 3);
 
     % Specify range and delimiter
-    opts.DataLines = dataLines;
     opts.Delimiter = "\t";
     
     % Specify column names and types
@@ -684,7 +683,6 @@ for jj=1:length(nums)
     opts = delimitedTextImportOptions("NumVariables", 3);
 
     % Specify range and delimiter
-    opts.DataLines = dataLines;
     opts.Delimiter = "\t";
     
     % Specify column names and types
@@ -710,7 +708,6 @@ for jj=1:length(nums)
     opts = delimitedTextImportOptions("NumVariables", 3);
 
     % Specify range and delimiter
-    opts.DataLines = dataLines;
     opts.Delimiter = "\t";
     
     % Specify column names and types
@@ -737,7 +734,6 @@ for jj=1:length(nums)
     opts = delimitedTextImportOptions("NumVariables", 3);
 
     % Specify range and delimiter
-    opts.DataLines = dataLines;
     opts.Delimiter = "\t";
     
     % Specify column names and types
@@ -757,6 +753,9 @@ for jj=1:length(nums)
     matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(4).orth = 1;
     matlabbatch{1}.spm.stats.fmri_spec.sess(2).multi = {''};
     matlabbatch{1}.spm.stats.fmri_spec.sess(2).regress = struct('name', {}, 'val', {});
+    confounds_run2 = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-"+nums(jj)+'/sub-'+nums(jj)+"_task-cardgame_run-2_desc-fslConfounds.tsv";
+    save_dir_run2 = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-"+nums(jj)+"/sub-"+nums(jj)+"_task-cardgame_run-2_desc-fslConfounds";
+    tsvtom(confounds_run2, save_dir_run2);
     matlabbatch{1}.spm.stats.fmri_spec.sess(2).multi_reg = {'/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-'+nums(jj)+'/sub-'+nums(jj)+'_task-cardgame_run-2_desc-fslConfounds.mat'};
     matlabbatch{1}.spm.stats.fmri_spec.sess(2).hpf = 128;
     %%
@@ -1029,7 +1028,6 @@ for jj=1:length(nums)
     opts = delimitedTextImportOptions("NumVariables", 3);
 
     % Specify range and delimiter
-    opts.DataLines = dataLines;
     opts.Delimiter = "\t";
     
     % Specify column names and types
@@ -1056,7 +1054,6 @@ for jj=1:length(nums)
     opts = delimitedTextImportOptions("NumVariables", 3);
 
     % Specify range and delimiter
-    opts.DataLines = dataLines;
     opts.Delimiter = "\t";
     
     % Specify column names and types
@@ -1082,7 +1079,6 @@ for jj=1:length(nums)
     opts = delimitedTextImportOptions("NumVariables", 3);
 
     % Specify range and delimiter
-    opts.DataLines = dataLines;
     opts.Delimiter = "\t";
     
     % Specify column names and types
@@ -1109,7 +1105,6 @@ for jj=1:length(nums)
     opts = delimitedTextImportOptions("NumVariables", 3);
 
     % Specify range and delimiter
-    opts.DataLines = dataLines;
     opts.Delimiter = "\t";
     
     % Specify column names and types
@@ -1129,6 +1124,9 @@ for jj=1:length(nums)
     matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(4).orth = 1;
     matlabbatch{1}.spm.stats.fmri_spec.sess(3).multi = {''};
     matlabbatch{1}.spm.stats.fmri_spec.sess(3).regress = struct('name', {}, 'val', {});
+    confounds_run3 = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-"+nums(jj)+'/sub-'+nums(jj)+"_task-cardgame_run-3_desc-fslConfounds.tsv";
+    save_dir_run3 = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-"+nums(jj)+"/sub-"+nums(jj)+"_task-cardgame_run-3_desc-fslConfounds";
+    tsvtom(confounds_run3, save_dir_run3);
     matlabbatch{1}.spm.stats.fmri_spec.sess(3).multi_reg = {'/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-'+nums(jj)+'/sub-'+nums(jj)+'_task-cardgame_run-3_desc-fslConfounds.mat'};
     matlabbatch{1}.spm.stats.fmri_spec.sess(3).hpf = 128;
     matlabbatch{1}.spm.stats.fmri_spec.fact = struct('name', {}, 'levels', {});
