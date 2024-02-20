@@ -1,4 +1,9 @@
-clear all; clc
+clear all; clc; close all;
+addpath /ZPOOL/data/tools/spm12/;
+savepath;
+
+spm fmri
+
 %% Script for running individual level stats across subs in SPM
 % Changes that need to be made:
 %   -Replace sub IDs with var
@@ -9,17 +14,23 @@ clear all; clc
 
 
 %% Code for stats:
-% nums = string([189,207:1:238]);
-nums = "203";
+nums = string([189,203,207:1:238]);
+delete_files = input("Do you want to clear save directories? Press 1 if yes.");
 file_nums_for_subjects = string(zeros(size(length(nums))));
-for jj=1:length(nums)
-    savedir = '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-'+nums(jj)+'/1stlevel_withConfounds';
-    [status, msg, msgID] = mkdir(savedir);
-    if status~=1
-        mkdir(savedir);
+if delete_files == 1
+    for jj=1:length(nums)
+        savedir = '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-'+nums(jj)+'/1stlevel_withConfounds';
+        [status, msg, msgID] = mkdir(savedir);
+        if status~=1
+            mkdir(savedir);
+        elseif status == 1
+            delete(fullfile(savedir, '*'))
+        end
     end
 end
 for jj=1:length(nums)
+    disp(nums(jj))
+    savedir = '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-'+nums(jj)+'/1stlevel_withConfounds';
     matlabbatch{1}.spm.stats.fmri_spec.dir = cellstr({savedir});
     matlabbatch{1}.spm.stats.fmri_spec.timing.units = 'secs';
     matlabbatch{1}.spm.stats.fmri_spec.timing.RT = 2;
@@ -36,7 +47,10 @@ for jj=1:length(nums)
             arry_1 = dir(dir_to_check_1_2+'**/*run-1_vol0*.nii');
             name_1 = {arry_1(1:end).name};
             for ii=1:length(name_1)
-                name_1{1,ii} = fullfile(dir_to_check_1_2,name_1{1,ii});
+             file_to_store_1 = fullfile(dir_to_check_1_2,name_1{1,ii});
+             if dir(file_to_store_1).bytes ~=0 
+                 name_1{1,ii} = file_to_store_1;
+             end
             end
             name_1 = name_1';
              matlabbatch{1}.spm.stats.fmri_spec.sess(1).scans = cellstr(name_1);
@@ -144,6 +158,9 @@ for jj=1:length(nums)
                 matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(4).orth = 1;
                 matlabbatch{1}.spm.stats.fmri_spec.sess(1).multi = {''};
                 matlabbatch{1}.spm.stats.fmri_spec.sess(1).regress = struct('name', {}, 'val', {});
+                confounds_run1 = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-"+nums(jj)+'/sub-'+nums(jj)+"_task-cardgame_run-1_desc-fslConfounds.tsv";
+                save_dir_run1 = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-"+nums(jj)+"/sub-"+nums(jj)+"_task-cardgame_run-1_desc-fslConfounds";
+                tsvtom(confounds_run1, save_dir_run1);
                 matlabbatch{1}.spm.stats.fmri_spec.sess(1).multi_reg = cellstr({'/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-'+nums(jj)+'/sub-'+nums(jj)+'_task-cardgame_run-1_desc-fslConfounds.mat'});
                 matlabbatch{1}.spm.stats.fmri_spec.sess(1).hpf = 128;
         end 
@@ -159,7 +176,10 @@ for jj=1:length(nums)
             arry_2 = dir(dir_to_check_2_2+'**/*run-2_vol0*.nii');
             name_2 = {arry_2(1:end).name};
             for ii=1:length(name_2)
-                name_2{1,ii} = fullfile(dir_to_check_2_2,name_2{1,ii});
+             file_to_store_2 = fullfile(dir_to_check_2_2,name_2{1,ii});
+             if dir(file_to_store_2).bytes ~=0 
+                 name_2{1,ii} = file_to_store_2;
+             end
             end
             name_2 = name_2';
             matlabbatch{1}.spm.stats.fmri_spec.sess(2).scans = cellstr(name_2);                                                   
@@ -285,7 +305,10 @@ for jj=1:length(nums)
             arry_3 = dir(dir_to_check_3_2+'**/*run-3_vol0*.nii');
             name_3 = {arry_3(1:end).name};
             for ii=1:length(name_3)
-                name_3{1,ii} = fullfile(dir_to_check_3_2,name_3{1,ii});
+             file_to_store_3 = fullfile(dir_to_check_3_2,name_3{1,ii});
+             if dir(file_to_store_3).bytes ~=0 
+                 name_3{1,ii} = file_to_store_3;
+             end
             end
             name_3 = name_3';
             matlabbatch{1}.spm.stats.fmri_spec.sess(3).scans = cellstr(name_3);
