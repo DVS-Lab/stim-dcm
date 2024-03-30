@@ -14,7 +14,7 @@ spm fmri
 
 
 %% Code for stats:
-nums = string([189,203,207:1:238]);
+nums = string([189,203,207:1:222,225:1:228,230:1:238]);
 delete_files = input("Do you want to clear save directories? Press 1 if yes.");
 file_nums_for_subjects = string(zeros(size(length(nums))));
 if delete_files == 1
@@ -28,8 +28,11 @@ if delete_files == 1
         end
     end
 end
+run_info = readtable("/ZPOOL/data/projects/stim-dcm/code/outliers_task-cardgame_runinfo.tsv", "FileType","text",'Delimiter','\t');
 for jj=1:length(nums)
+    clearvars -except run_info nums jj
     disp(nums(jj))
+    run_counter = 1;
     savedir = '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-'+nums(jj)+'/1stlevel_withConfounds';
     matlabbatch{1}.spm.stats.fmri_spec.dir = cellstr({savedir});
     matlabbatch{1}.spm.stats.fmri_spec.timing.units = 'secs';
@@ -40,30 +43,33 @@ for jj=1:length(nums)
     dir_to_check_1 = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-"+nums(jj);
     fol_name_1 = "run-1";
     folderfull_1 = fullfile(dir_to_check_1, fol_name_1);
-    if exist(folderfull_1, 'dir')
-        foldercontent_1 = dir(folderfull_1);
-        if numel(foldercontent_1)>3
-            dir_to_check_1_2 = '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-'+nums(jj)+'/func/';
-            arry_1 = dir(dir_to_check_1_2+'**/*run-1_vol0*.nii');
-            name_1 = {arry_1(1:end).name};
-            for ii=1:length(name_1)
-             file_to_store_1 = fullfile(dir_to_check_1_2,name_1{1,ii});
-             if dir(file_to_store_1).bytes ~=0 
-                 name_1{1,ii} = file_to_store_1;
-             end
-            end
-            name_1 = name_1';
-             matlabbatch{1}.spm.stats.fmri_spec.sess(1).scans = cellstr(name_1);
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(1).name = '_punish_rtpj';
+    idx_run_1 = ismember(run_info(:,1).Sub,strcat('sub-',nums(jj))) & ismember(run_info(:,3).run, 1) & ismember(run_info(:,6).outlier_run_Custom1, "False");
+    %%
+    if any(idx_run_1)
+        if exist(folderfull_1, 'dir')
+            foldercontent_1 = dir(folderfull_1);
+            if numel(foldercontent_1)>3
+                dir_to_check_1_2 = '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-'+nums(jj)+'/func/';
+                arry_1 = dir(dir_to_check_1_2+'**/*run-1_vol0*.nii');
+                name_1 = {arry_1(1:end).name};
+                for ii=1:length(name_1)
+                    file_to_store_1 = fullfile(dir_to_check_1_2,name_1{1,ii});
+                    if dir(file_to_store_1).bytes ~=0
+                        name_1{1,ii} = file_to_store_1;
+                    end
+                end
+                name_1 = name_1';
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).scans = cellstr(name_1);
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(1).name = '_punish_rtpj';
                 p_rtpj = '_punish_rtpj';
                 %%
                 filepath_p_rtpj = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/EVFiles/sub-"+nums(jj)+"/cardgame/run-1/"+p_rtpj;
                 %% Set up the Import Options and import the data
                 opts = delimitedTextImportOptions("NumVariables", 3);
-            
+
                 % Specify range and delimiter
                 opts.Delimiter = "\t";
-                
+
                 % Specify column names and types
                 opts.VariableNames = ["VarName1", "VarName2", "VarName3"];
                 opts.VariableTypes = ["double", "double", "double"];
@@ -71,25 +77,25 @@ for jj=1:length(nums)
                 opts.ExtraColumnsRule = "ignore";
                 opts.EmptyLineRule = "read";
                 file_to_read_p_rtpj = readtable(filepath_p_rtpj,opts);
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(1).onset = table2array(file_to_read_p_rtpj(:,1));
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(1).onset = table2array(file_to_read_p_rtpj(:,1));
                 %%
                 %%
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(1).duration = table2array(file_to_read_p_rtpj(:,2));
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(1).duration = table2array(file_to_read_p_rtpj(:,2));
                 %%
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(1).tmod = 0;
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(1).pmod = struct('name', {}, 'param', {}, 'poly', {});
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(1).orth = 1;
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(2).name = '_reward_rtpj';
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(1).tmod = 0;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(1).pmod = struct('name', {}, 'param', {}, 'poly', {});
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(1).orth = 1;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(2).name = '_reward_rtpj';
                 %%
                 r_rtpj = '_reward_rtpj';
                 %%
                 filepath_r_rtpj = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/EVFiles/sub-"+nums(jj)+"/cardgame/run-1/"+r_rtpj;
                 %% Set up the Import Options and import the data
                 opts = delimitedTextImportOptions("NumVariables", 3);
-            
+
                 % Specify range and delimiter
                 opts.Delimiter = "\t";
-                
+
                 % Specify column names and types
                 opts.VariableNames = ["VarName1", "VarName2", "VarName3"];
                 opts.VariableTypes = ["double", "double", "double"];
@@ -97,24 +103,24 @@ for jj=1:length(nums)
                 opts.ExtraColumnsRule = "ignore";
                 opts.EmptyLineRule = "read";
                 file_to_read_r_rtpj = readtable(filepath_r_rtpj,opts);
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(2).onset = table2array(file_to_read_r_rtpj(:,1));
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(2).onset = table2array(file_to_read_r_rtpj(:,1));
                 %%
                 %%
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(2).duration = table2array(file_to_read_r_rtpj(:,2));
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(2).duration = table2array(file_to_read_r_rtpj(:,2));
                 %%
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(2).tmod = 0;
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(2).pmod = struct('name', {}, 'param', {}, 'poly', {});
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(2).orth = 1;
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(3).name = '_punish_vlpfc';
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(2).tmod = 0;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(2).pmod = struct('name', {}, 'param', {}, 'poly', {});
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(2).orth = 1;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(3).name = '_punish_vlpfc';
                 p_vlpfc = '_punish_vlpfc';
                 %%
                 filepath_p_vlpfc = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/EVFiles/sub-"+nums(jj)+"/cardgame/run-1/"+p_vlpfc;
                 %% Set up the Import Options and import the data
                 opts = delimitedTextImportOptions("NumVariables", 3);
-            
+
                 % Specify range and delimiter
                 opts.Delimiter = "\t";
-                
+
                 % Specify column names and types
                 opts.VariableNames = ["VarName1", "VarName2", "VarName3"];
                 opts.VariableTypes = ["double", "double", "double"];
@@ -122,25 +128,25 @@ for jj=1:length(nums)
                 opts.ExtraColumnsRule = "ignore";
                 opts.EmptyLineRule = "read";
                 file_to_read_p_vlpfc = readtable(filepath_p_vlpfc,opts);
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(3).onset = table2array(file_to_read_p_vlpfc(:,1));
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(3).onset = table2array(file_to_read_p_vlpfc(:,1));
                 %%
                 %%
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(3).duration = table2array(file_to_read_p_rtpj(:,2));
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(3).duration = table2array(file_to_read_p_rtpj(:,2));
                 %%
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(3).tmod = 0;
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(3).pmod = struct('name', {}, 'param', {}, 'poly', {});
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(3).orth = 1;
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(4).name = '_reward_vlpfc';
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(3).tmod = 0;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(3).pmod = struct('name', {}, 'param', {}, 'poly', {});
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(3).orth = 1;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(4).name = '_reward_vlpfc';
                 %%
                 r_vlpfc = '_reward_vlpfc';
                 %%
                 filepath_r_vlpfc = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/EVFiles/sub-"+nums(jj)+"/cardgame/run-1/"+r_vlpfc;
                 %% Set up the Import Options and import the data
                 opts = delimitedTextImportOptions("NumVariables", 3);
-            
+
                 % Specify range and delimiter
                 opts.Delimiter = "\t";
-                
+
                 % Specify column names and types
                 opts.VariableNames = ["VarName1", "VarName2", "VarName3"];
                 opts.VariableTypes = ["double", "double", "double"];
@@ -148,280 +154,425 @@ for jj=1:length(nums)
                 opts.ExtraColumnsRule = "ignore";
                 opts.EmptyLineRule = "read";
                 file_to_read_r_vlpfc = readtable(filepath_r_vlpfc,opts);
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(4).onset = table2array(file_to_read_r_vlpfc(:,1));
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(4).onset = table2array(file_to_read_r_vlpfc(:,1));
                 %%
                 %%
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(4).duration = table2array(file_to_read_r_rtpj(:,2));
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(4).duration = table2array(file_to_read_r_rtpj(:,2));
                 %%
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(4).tmod = 0;
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(4).pmod = struct('name', {}, 'param', {}, 'poly', {});
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(4).orth = 1;
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).multi = {''};
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).regress = struct('name', {}, 'val', {});
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(4).tmod = 0;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(4).pmod = struct('name', {}, 'param', {}, 'poly', {});
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(4).orth = 1;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).multi = {''};
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).regress = struct('name', {}, 'val', {});
                 confounds_run1 = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-"+nums(jj)+'/sub-'+nums(jj)+"_task-cardgame_run-1_desc-fslConfounds.tsv";
                 save_dir_run1 = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-"+nums(jj)+"/sub-"+nums(jj)+"_task-cardgame_run-1_desc-fslConfounds";
                 tsvtom(confounds_run1, save_dir_run1);
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).multi_reg = cellstr({'/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-'+nums(jj)+'/sub-'+nums(jj)+'_task-cardgame_run-1_desc-fslConfounds.mat'});
-                matlabbatch{1}.spm.stats.fmri_spec.sess(1).hpf = 128;
-        end 
-    end 
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).multi_reg = cellstr({'/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-'+nums(jj)+'/sub-'+nums(jj)+'_task-cardgame_run-1_desc-fslConfounds.mat'});
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).hpf = 128;
+                run_counter = run_counter+1;
+            end
+        end
+    end
     %%
     dir_to_check_2 = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-"+nums(jj);
     fol_name_2 = "run-2";
     folderfull_2 = fullfile(dir_to_check_2, fol_name_2);
-    if exist(folderfull_2, 'dir')
-        foldercontent_2 = dir(folderfull_2);
-        if numel(foldercontent_2)>3
-            dir_to_check_2_2 = '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-'+nums(jj)+'/func/';
-            arry_2 = dir(dir_to_check_2_2+'**/*run-2_vol0*.nii');
-            name_2 = {arry_2(1:end).name};
-            for ii=1:length(name_2)
-             file_to_store_2 = fullfile(dir_to_check_2_2,name_2{1,ii});
-             if dir(file_to_store_2).bytes ~=0 
-                 name_2{1,ii} = file_to_store_2;
-             end
+    idx_run_2 = ismember(run_info(:,1).Sub,strcat('sub-',nums(jj))) & ismember(run_info(:,3).run, 2) & ismember(run_info(:,6).outlier_run_Custom1, "False");
+    %%
+    if any(idx_run_2)
+        if exist(folderfull_2, 'dir')
+            foldercontent_2 = dir(folderfull_2);
+            if numel(foldercontent_2)>3
+                dir_to_check_2_2 = '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-'+nums(jj)+'/func/';
+                arry_2 = dir(dir_to_check_2_2+'**/*run-2_vol0*.nii');
+                name_2 = {arry_2(1:end).name};
+                for ii=1:length(name_2)
+                    file_to_store_2 = fullfile(dir_to_check_2_2,name_2{1,ii});
+                    if dir(file_to_store_2).bytes ~=0
+                        name_2{1,ii} = file_to_store_2;
+                    end
+                end
+                name_2 = name_2';
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).scans = cellstr(name_2);
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(1).name = '_punish_rtpj';
+                p_rtpj = '_punish_rtpj';
+                %%
+                filepath_p_rtpj = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/EVFiles/sub-"+nums(jj)+"/cardgame/run-2/"+p_rtpj;
+                %% Set up the Import Options and import the data
+                opts = delimitedTextImportOptions("NumVariables", 3);
+
+                % Specify range and delimiter
+                opts.Delimiter = "\t";
+
+                % Specify column names and types
+                opts.VariableNames = ["VarName1", "VarName2", "VarName3"];
+                opts.VariableTypes = ["double", "double", "double"];
+                % Specify file level properties
+                opts.ExtraColumnsRule = "ignore";
+                opts.EmptyLineRule = "read";
+                file_to_read_p_rtpj = readtable(filepath_p_rtpj,opts);
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(1).onset = table2array(file_to_read_p_rtpj(:,1));
+                %%
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(1).duration = table2array(file_to_read_p_rtpj(:,2));
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(1).tmod = 0;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(1).pmod = struct('name', {}, 'param', {}, 'poly', {});
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(1).orth = 1;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(2).name = '_reward_rtpj';
+                %%
+                r_rtpj = '_reward_rtpj';
+                %%
+                filepath_r_rtpj = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/EVFiles/sub-"+nums(jj)+"/cardgame/run-2/"+r_rtpj;
+                %% Set up the Import Options and import the data
+                opts = delimitedTextImportOptions("NumVariables", 3);
+
+                % Specify range and delimiter
+                opts.Delimiter = "\t";
+
+                % Specify column names and types
+                opts.VariableNames = ["VarName1", "VarName2", "VarName3"];
+                opts.VariableTypes = ["double", "double", "double"];
+                % Specify file level properties
+                opts.ExtraColumnsRule = "ignore";
+                opts.EmptyLineRule = "read";
+                file_to_read_r_rtpj = readtable(filepath_r_rtpj,opts);
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(2).onset = table2array(file_to_read_r_rtpj(:,1));
+                %%
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(2).duration = table2array(file_to_read_r_rtpj(:,2));
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(2).tmod = 0;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(2).pmod = struct('name', {}, 'param', {}, 'poly', {});
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(2).orth = 1;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(3).name = '_punish_vlpfc';
+                p_vlpfc = '_punish_vlpfc';
+                %%
+                filepath_p_vlpfc = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/EVFiles/sub-"+nums(jj)+"/cardgame/run-2/"+p_vlpfc;
+                %% Set up the Import Options and import the data
+                opts = delimitedTextImportOptions("NumVariables", 3);
+
+                % Specify range and delimiter
+                opts.Delimiter = "\t";
+
+                % Specify column names and types
+                opts.VariableNames = ["VarName1", "VarName2", "VarName3"];
+                opts.VariableTypes = ["double", "double", "double"];
+                % Specify file level properties
+                opts.ExtraColumnsRule = "ignore";
+                opts.EmptyLineRule = "read";
+                file_to_read_p_vlpfc = readtable(filepath_p_vlpfc,opts);
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(3).onset = table2array(file_to_read_p_vlpfc(:,1));
+                %%
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(3).duration = table2array(file_to_read_p_rtpj(:,2));
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(3).tmod = 0;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(3).pmod = struct('name', {}, 'param', {}, 'poly', {});
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(3).orth = 1;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(4).name = '_reward_vlpfc';
+                %%
+                r_vlpfc = '_reward_vlpfc';
+                %%
+                filepath_r_vlpfc = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/EVFiles/sub-"+nums(jj)+"/cardgame/run-2/"+r_vlpfc;
+                %% Set up the Import Options and import the data
+                opts = delimitedTextImportOptions("NumVariables", 3);
+
+                % Specify range and delimiter
+                opts.Delimiter = "\t";
+
+                % Specify column names and types
+                opts.VariableNames = ["VarName1", "VarName2", "VarName3"];
+                opts.VariableTypes = ["double", "double", "double"];
+                % Specify file level properties
+                opts.ExtraColumnsRule = "ignore";
+                opts.EmptyLineRule = "read";
+                file_to_read_r_vlpfc = readtable(filepath_r_vlpfc,opts);
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(4).onset = table2array(file_to_read_r_vlpfc(:,1));
+                %%
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(4).duration = table2array(file_to_read_r_rtpj(:,2));
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(4).tmod = 0;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(4).pmod = struct('name', {}, 'param', {}, 'poly', {});
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(4).orth = 1;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).multi = {''};
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).regress = struct('name', {}, 'val', {});
+                confounds_run2 = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-"+nums(jj)+'/sub-'+nums(jj)+"_task-cardgame_run-2_desc-fslConfounds.tsv";
+                save_dir_run2 = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-"+nums(jj)+"/sub-"+nums(jj)+"_task-cardgame_run-2_desc-fslConfounds";
+                tsvtom(confounds_run2, save_dir_run2);
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).multi_reg = cellstr({'/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-'+nums(jj)+'/sub-'+nums(jj)+'_task-cardgame_run-2_desc-fslConfounds.mat'});
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).hpf = 128;
+                run_counter = run_counter+1;
             end
-            name_2 = name_2';
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).scans = cellstr(name_2);                                                   
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(1).name = '_punish_rtpj';
-            p_rtpj = '_punish_rtpj';
-            %%
-            filepath_p_rtpj = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/EVFiles/sub-"+nums(jj)+"/cardgame/run-2/"+p_rtpj;
-            %% Set up the Import Options and import the data
-            opts = delimitedTextImportOptions("NumVariables", 3);
-        
-            % Specify range and delimiter
-            opts.Delimiter = "\t";
-            
-            % Specify column names and types
-            opts.VariableNames = ["VarName1", "VarName2", "VarName3"];
-            opts.VariableTypes = ["double", "double", "double"];
-            % Specify file level properties
-            opts.ExtraColumnsRule = "ignore";
-            opts.EmptyLineRule = "read";
-            file_to_read_p_rtpj = readtable(filepath_p_rtpj,opts);
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(1).onset = table2array(file_to_read_p_rtpj(:,1));
-            %%
-            %%
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(1).duration = table2array(file_to_read_p_rtpj(:,2));
-            %%
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(1).tmod = 0;
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(1).pmod = struct('name', {}, 'param', {}, 'poly', {});
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(1).orth = 1;
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(2).name = '_reward_rtpj';
-            %%
-            r_rtpj = '_reward_rtpj';
-            %%
-            filepath_r_rtpj = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/EVFiles/sub-"+nums(jj)+"/cardgame/run-2/"+r_rtpj;
-            %% Set up the Import Options and import the data
-            opts = delimitedTextImportOptions("NumVariables", 3);
-        
-            % Specify range and delimiter
-            opts.Delimiter = "\t";
-            
-            % Specify column names and types
-            opts.VariableNames = ["VarName1", "VarName2", "VarName3"];
-            opts.VariableTypes = ["double", "double", "double"];
-            % Specify file level properties
-            opts.ExtraColumnsRule = "ignore";
-            opts.EmptyLineRule = "read";
-            file_to_read_r_rtpj = readtable(filepath_r_rtpj,opts);
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(2).onset = table2array(file_to_read_r_rtpj(:,1));
-            %%
-            %%
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(2).duration = table2array(file_to_read_r_rtpj(:,2));
-            %%
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(2).tmod = 0;
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(2).pmod = struct('name', {}, 'param', {}, 'poly', {});
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(2).orth = 1;
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(3).name = '_punish_vlpfc';
-            p_vlpfc = '_punish_vlpfc';
-            %%
-            filepath_p_vlpfc = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/EVFiles/sub-"+nums(jj)+"/cardgame/run-2/"+p_vlpfc;
-            %% Set up the Import Options and import the data
-            opts = delimitedTextImportOptions("NumVariables", 3);
-        
-            % Specify range and delimiter
-            opts.Delimiter = "\t";
-            
-            % Specify column names and types
-            opts.VariableNames = ["VarName1", "VarName2", "VarName3"];
-            opts.VariableTypes = ["double", "double", "double"];
-            % Specify file level properties
-            opts.ExtraColumnsRule = "ignore";
-            opts.EmptyLineRule = "read";
-            file_to_read_p_vlpfc = readtable(filepath_p_vlpfc,opts);
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(3).onset = table2array(file_to_read_p_vlpfc(:,1));
-            %%
-            %%
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(3).duration = table2array(file_to_read_p_rtpj(:,2));
-            %%
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(3).tmod = 0;
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(3).pmod = struct('name', {}, 'param', {}, 'poly', {});
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(3).orth = 1;
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(4).name = '_reward_vlpfc';
-            %%
-            r_vlpfc = '_reward_vlpfc';
-            %%
-            filepath_r_vlpfc = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/EVFiles/sub-"+nums(jj)+"/cardgame/run-2/"+r_vlpfc;
-            %% Set up the Import Options and import the data
-            opts = delimitedTextImportOptions("NumVariables", 3);
-        
-            % Specify range and delimiter
-            opts.Delimiter = "\t";
-            
-            % Specify column names and types
-            opts.VariableNames = ["VarName1", "VarName2", "VarName3"];
-            opts.VariableTypes = ["double", "double", "double"];
-            % Specify file level properties
-            opts.ExtraColumnsRule = "ignore";
-            opts.EmptyLineRule = "read";
-            file_to_read_r_vlpfc = readtable(filepath_r_vlpfc,opts);
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(4).onset = table2array(file_to_read_r_vlpfc(:,1));
-            %%
-            %%
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(4).duration = table2array(file_to_read_r_rtpj(:,2));
-            %%
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(4).tmod = 0;
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(4).pmod = struct('name', {}, 'param', {}, 'poly', {});
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(4).orth = 1;
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).multi = {''};
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).regress = struct('name', {}, 'val', {});
-            confounds_run2 = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-"+nums(jj)+'/sub-'+nums(jj)+"_task-cardgame_run-2_desc-fslConfounds.tsv";
-            save_dir_run2 = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-"+nums(jj)+"/sub-"+nums(jj)+"_task-cardgame_run-2_desc-fslConfounds";
-            tsvtom(confounds_run2, save_dir_run2);
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).multi_reg = cellstr({'/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-'+nums(jj)+'/sub-'+nums(jj)+'_task-cardgame_run-2_desc-fslConfounds.mat'});
-            matlabbatch{1}.spm.stats.fmri_spec.sess(2).hpf = 128;
         end
     end
-            %%
+    %%
     dir_to_check_3 = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-"+nums(jj);
     fol_name_3 = "run-3";
     folderfull_3 = fullfile(dir_to_check_3, fol_name_3);
-    if exist(folderfull_3, 'dir')
-        foldercontent_3 = dir(folderfull_3);
-        if numel(foldercontent_3)>3
-            dir_to_check_3_2 = '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-'+nums(jj)+'/func/';
-            arry_3 = dir(dir_to_check_3_2+'**/*run-3_vol0*.nii');
-            name_3 = {arry_3(1:end).name};
-            for ii=1:length(name_3)
-             file_to_store_3 = fullfile(dir_to_check_3_2,name_3{1,ii});
-             if dir(file_to_store_3).bytes ~=0 
-                 name_3{1,ii} = file_to_store_3;
-             end
+    idx_run_3 = ismember(run_info(:,1).Sub,strcat('sub-',nums(jj))) & ismember(run_info(:,3).run, 3) & ismember(run_info(:,6).outlier_run_Custom1, "False");
+    %%
+    if any(idx_run_3)
+        if exist(folderfull_3, 'dir')
+            foldercontent_3 = dir(folderfull_3);
+            if numel(foldercontent_3)>3
+                dir_to_check_3_2 = '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-'+nums(jj)+'/func/';
+                arry_3 = dir(dir_to_check_3_2+'**/*run-3_vol0*.nii');
+                name_3 = {arry_3(1:end).name};
+                for ii=1:length(name_3)
+                    file_to_store_3 = fullfile(dir_to_check_3_2,name_3{1,ii});
+                    if dir(file_to_store_3).bytes ~=0
+                        name_3{1,ii} = file_to_store_3;
+                    end
+                end
+                name_3 = name_3';
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).scans = cellstr(name_3);
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(1).name = '_punish_rtpj';
+                p_rtpj = '_punish_rtpj';
+                %%
+                filepath_p_rtpj = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/EVFiles/sub-"+nums(jj)+"/cardgame/run-3/"+p_rtpj;
+                %% Set up the Import Options and import the data
+                opts = delimitedTextImportOptions("NumVariables", 3);
+
+                % Specify range and delimiter
+                opts.Delimiter = "\t";
+
+                % Specify column names and types
+                opts.VariableNames = ["VarName1", "VarName2", "VarName3"];
+                opts.VariableTypes = ["double", "double", "double"];
+                % Specify file level properties
+                opts.ExtraColumnsRule = "ignore";
+                opts.EmptyLineRule = "read";
+                file_to_read_p_rtpj = readtable(filepath_p_rtpj,opts);
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(1).onset = table2array(file_to_read_p_rtpj(:,1));
+                %%
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(1).duration = table2array(file_to_read_p_rtpj(:,2));
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(1).tmod = 0;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(1).pmod = struct('name', {}, 'param', {}, 'poly', {});
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(1).orth = 1;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(2).name = '_reward_rtpj';
+                %%
+                r_rtpj = '_reward_rtpj';
+                %%
+                filepath_r_rtpj = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/EVFiles/sub-"+nums(jj)+"/cardgame/run-3/"+r_rtpj;
+                %% Set up the Import Options and import the data
+                opts = delimitedTextImportOptions("NumVariables", 3);
+
+                % Specify range and delimiter
+                opts.Delimiter = "\t";
+
+                % Specify column names and types
+                opts.VariableNames = ["VarName1", "VarName2", "VarName3"];
+                opts.VariableTypes = ["double", "double", "double"];
+                % Specify file level properties
+                opts.ExtraColumnsRule = "ignore";
+                opts.EmptyLineRule = "read";
+                file_to_read_r_rtpj = readtable(filepath_r_rtpj,opts);
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(2).onset = table2array(file_to_read_r_rtpj(:,1));
+                %%
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(2).duration = table2array(file_to_read_r_rtpj(:,2));
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(2).tmod = 0;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(2).pmod = struct('name', {}, 'param', {}, 'poly', {});
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(2).orth = 1;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(3).name = '_punish_vlpfc';
+                p_vlpfc = '_punish_vlpfc';
+                %%
+                filepath_p_vlpfc = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/EVFiles/sub-"+nums(jj)+"/cardgame/run-3/"+p_vlpfc;
+                %% Set up the Import Options and import the data
+                opts = delimitedTextImportOptions("NumVariables", 3);
+
+                % Specify range and delimiter
+                opts.Delimiter = "\t";
+
+                % Specify column names and types
+                opts.VariableNames = ["VarName1", "VarName2", "VarName3"];
+                opts.VariableTypes = ["double", "double", "double"];
+                % Specify file level properties
+                opts.ExtraColumnsRule = "ignore";
+                opts.EmptyLineRule = "read";
+                file_to_read_p_vlpfc = readtable(filepath_p_vlpfc,opts);
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(3).onset = table2array(file_to_read_p_vlpfc(:,1));
+                %%
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(3).duration = table2array(file_to_read_p_rtpj(:,2));
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(3).tmod = 0;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(3).pmod = struct('name', {}, 'param', {}, 'poly', {});
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(3).orth = 1;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(4).name = '_reward_vlpfc';
+                %%
+                r_vlpfc = '_reward_vlpfc';
+                %%
+                filepath_r_vlpfc = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/EVFiles/sub-"+nums(jj)+"/cardgame/run-3/"+r_vlpfc;
+                %% Set up the Import Options and import the data
+                opts = delimitedTextImportOptions("NumVariables", 3);
+
+                % Specify range and delimiter
+                opts.Delimiter = "\t";
+
+                % Specify column names and types
+                opts.VariableNames = ["VarName1", "VarName2", "VarName3"];
+                opts.VariableTypes = ["double", "double", "double"];
+                % Specify file level properties
+                opts.ExtraColumnsRule = "ignore";
+                opts.EmptyLineRule = "read";
+                file_to_read_r_vlpfc = readtable(filepath_r_vlpfc,opts);
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(4).onset = table2array(file_to_read_r_vlpfc(:,1));
+                %%
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(4).duration = table2array(file_to_read_r_rtpj(:,2));
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(4).tmod = 0;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(4).pmod = struct('name', {}, 'param', {}, 'poly', {});
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(4).orth = 1;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).multi = {''};
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).regress = struct('name', {}, 'val', {});
+                confounds_run3 = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-"+nums(jj)+'/sub-'+nums(jj)+"_task-cardgame_run-3_desc-fslConfounds.tsv";
+                save_dir_run3 = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-"+nums(jj)+"/sub-"+nums(jj)+"_task-cardgame_run-3_desc-fslConfounds";
+                tsvtom(confounds_run3, save_dir_run3);
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).multi_reg = cellstr({'/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-'+nums(jj)+'/sub-'+nums(jj)+'_task-cardgame_run-3_desc-fslConfounds.mat'});
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).hpf = 128;
+                run_counter = run_counter+1;
             end
-            name_3 = name_3';
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).scans = cellstr(name_3);
-            %%
-                matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(1).name = '_punish_rtpj';
-            p_rtpj = '_punish_rtpj';
-            %%
-            filepath_p_rtpj = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/EVFiles/sub-"+nums(jj)+"/cardgame/run-1/"+p_rtpj;
-            %% Set up the Import Options and import the data
-            opts = delimitedTextImportOptions("NumVariables", 3);
-        
-            % Specify range and delimiter
-            opts.Delimiter = "\t";
-            
-            % Specify column names and types
-            opts.VariableNames = ["VarName1", "VarName2", "VarName3"];
-            opts.VariableTypes = ["double", "double", "double"];
-            % Specify file level properties
-            opts.ExtraColumnsRule = "ignore";
-            opts.EmptyLineRule = "read";
-            file_to_read_p_rtpj = readtable(filepath_p_rtpj,opts);
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(1).onset = table2array(file_to_read_p_rtpj(:,1));
-            %%
-            %%
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(1).duration = table2array(file_to_read_p_rtpj(:,2));
-            %%
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(1).tmod = 0;
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(1).pmod = struct('name', {}, 'param', {}, 'poly', {});
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(1).orth = 1;
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(2).name = '_reward_rtpj';
-            %%
-            r_rtpj = '_reward_rtpj';
-            %%
-            filepath_r_rtpj = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/EVFiles/sub-"+nums(jj)+"/cardgame/run-3/"+r_rtpj;
-            %% Set up the Import Options and import the data
-            opts = delimitedTextImportOptions("NumVariables", 3);
-        
-            % Specify range and delimiter
-            opts.Delimiter = "\t";
-            
-            % Specify column names and types
-            opts.VariableNames = ["VarName1", "VarName2", "VarName3"];
-            opts.VariableTypes = ["double", "double", "double"];
-            % Specify file level properties
-            opts.ExtraColumnsRule = "ignore";
-            opts.EmptyLineRule = "read";
-            file_to_read_r_rtpj = readtable(filepath_r_rtpj,opts);
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(2).onset = table2array(file_to_read_r_rtpj(:,1));
-            %%
-            %%
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(2).duration = table2array(file_to_read_r_rtpj(:,2));
-            %%
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(2).tmod = 0;
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(2).pmod = struct('name', {}, 'param', {}, 'poly', {});
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(2).orth = 1;
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(3).name = '_punish_vlpfc';
-            p_vlpfc = '_punish_vlpfc';
-            %%
-            filepath_p_vlpfc = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/EVFiles/sub-"+nums(jj)+"/cardgame/run-3/"+p_vlpfc;
-            %% Set up the Import Options and import the data
-            opts = delimitedTextImportOptions("NumVariables", 3);
-        
-            % Specify range and delimiter
-            opts.Delimiter = "\t";
-            
-            % Specify column names and types
-            opts.VariableNames = ["VarName1", "VarName2", "VarName3"];
-            opts.VariableTypes = ["double", "double", "double"];
-            % Specify file level properties
-            opts.ExtraColumnsRule = "ignore";
-            opts.EmptyLineRule = "read";
-            file_to_read_p_vlpfc = readtable(filepath_p_vlpfc,opts);
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(3).onset = table2array(file_to_read_p_vlpfc(:,1));
-            %%
-            %%
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(3).duration = table2array(file_to_read_p_rtpj(:,2));
-            %%
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(3).tmod = 0;
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(3).pmod = struct('name', {}, 'param', {}, 'poly', {});
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(3).orth = 1;
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(4).name = '_reward_vlpfc';
-            %%
-            r_vlpfc = '_reward_vlpfc';
-            %%
-            filepath_r_vlpfc = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/EVFiles/sub-"+nums(jj)+"/cardgame/run-3/"+r_vlpfc;
-            %% Set up the Import Options and import the data
-            opts = delimitedTextImportOptions("NumVariables", 3);
-        
-            % Specify range and delimiter
-            opts.Delimiter = "\t";
-            
-            % Specify column names and types
-            opts.VariableNames = ["VarName1", "VarName2", "VarName3"];
-            opts.VariableTypes = ["double", "double", "double"];
-            % Specify file level properties
-            opts.ExtraColumnsRule = "ignore";
-            opts.EmptyLineRule = "read";
-            file_to_read_r_vlpfc = readtable(filepath_r_vlpfc,opts);
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(4).onset = table2array(file_to_read_r_vlpfc(:,1));
-            %%
-            %%
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(4).duration = table2array(file_to_read_r_rtpj(:,2));
-            %%
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(4).tmod = 0;
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(4).pmod = struct('name', {}, 'param', {}, 'poly', {});
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(4).orth = 1;
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).multi = {''};
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).regress = struct('name', {}, 'val', {});
-            confounds_run3 = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-"+nums(jj)+'/sub-'+nums(jj)+"_task-cardgame_run-3_desc-fslConfounds.tsv";
-            save_dir_run3 = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-"+nums(jj)+"/sub-"+nums(jj)+"_task-cardgame_run-3_desc-fslConfounds";
-            tsvtom(confounds_run3, save_dir_run3);
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).multi_reg = cellstr({'/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-'+nums(jj)+'/sub-'+nums(jj)+'_task-cardgame_run-3_desc-fslConfounds.mat'});
-            matlabbatch{1}.spm.stats.fmri_spec.sess(3).hpf = 128;
+        end
+    end
+    dir_to_check_4 = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-"+nums(jj);
+    fol_name_4 = "run-4";
+    folderfull_4 = fullfile(dir_to_check_4, fol_name_4);
+    idx_run_4 = ismember(run_info(:,1).Sub,strcat('sub-',nums(jj))) & ismember(run_info(:,3).run, 4) & ismember(run_info(:,6).outlier_run_Custom1, "False");
+    %%
+    if any(idx_run_4)
+        if exist(folderfull_4, 'dir')
+            foldercontent_4 = dir(folderfull_4);
+            if numel(foldercontent_4)>3
+                dir_to_check_4_2 = '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-'+nums(jj)+'/func/';
+                arry_4 = dir(dir_to_check_4_2+'**/*run-4_vol0*.nii');
+                name_4 = {arry_4(1:end).name};
+                for ii=1:length(name_4)
+                    file_to_store_4 = fullfile(dir_to_check_4_2,name_4{1,ii});
+                    if dir(file_to_store_4).bytes ~=0
+                        name_4{1,ii} = file_to_store_4;
+                    end
+                end
+                name_4 = name_4';
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).scans = cellstr(name_4);
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(1).name = '_punish_rtpj';
+                p_rtpj = '_punish_rtpj';
+                %%
+                filepath_p_rtpj = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/EVFiles/sub-"+nums(jj)+"/cardgame/run-4/"+p_rtpj;
+                %% Set up the Import Options and import the data
+                opts = delimitedTextImportOptions("NumVariables", 3);
+
+                % Specify range and delimiter
+                opts.Delimiter = "\t";
+
+                % Specify column names and types
+                opts.VariableNames = ["VarName1", "VarName2", "VarName3"];
+                opts.VariableTypes = ["double", "double", "double"];
+                % Specify file level properties
+                opts.ExtraColumnsRule = "ignore";
+                opts.EmptyLineRule = "read";
+                file_to_read_p_rtpj = readtable(filepath_p_rtpj,opts);
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(1).onset = table2array(file_to_read_p_rtpj(:,1));
+                %%
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(1).duration = table2array(file_to_read_p_rtpj(:,2));
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(1).tmod = 0;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(1).pmod = struct('name', {}, 'param', {}, 'poly', {});
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(1).orth = 1;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(2).name = '_reward_rtpj';
+                %%
+                r_rtpj = '_reward_rtpj';
+                %%
+                filepath_r_rtpj = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/EVFiles/sub-"+nums(jj)+"/cardgame/run-4/"+r_rtpj;
+                %% Set up the Import Options and import the data
+                opts = delimitedTextImportOptions("NumVariables", 3);
+
+                % Specify range and delimiter
+                opts.Delimiter = "\t";
+
+                % Specify column names and types
+                opts.VariableNames = ["VarName1", "VarName2", "VarName3"];
+                opts.VariableTypes = ["double", "double", "double"];
+                % Specify file level properties
+                opts.ExtraColumnsRule = "ignore";
+                opts.EmptyLineRule = "read";
+                file_to_read_r_rtpj = readtable(filepath_r_rtpj,opts);
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(2).onset = table2array(file_to_read_r_rtpj(:,1));
+                %%
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(2).duration = table2array(file_to_read_r_rtpj(:,2));
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(2).tmod = 0;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(2).pmod = struct('name', {}, 'param', {}, 'poly', {});
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(2).orth = 1;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(3).name = '_punish_vlpfc';
+                p_vlpfc = '_punish_vlpfc';
+                %%
+                filepath_p_vlpfc = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/EVFiles/sub-"+nums(jj)+"/cardgame/run-4/"+p_vlpfc;
+                %% Set up the Import Options and import the data
+                opts = delimitedTextImportOptions("NumVariables", 3);
+
+                % Specify range and delimiter
+                opts.Delimiter = "\t";
+
+                % Specify column names and types
+                opts.VariableNames = ["VarName1", "VarName2", "VarName3"];
+                opts.VariableTypes = ["double", "double", "double"];
+                % Specify file level properties
+                opts.ExtraColumnsRule = "ignore";
+                opts.EmptyLineRule = "read";
+                file_to_read_p_vlpfc = readtable(filepath_p_vlpfc,opts);
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(3).onset = table2array(file_to_read_p_vlpfc(:,1));
+                %%
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(3).duration = table2array(file_to_read_p_rtpj(:,2));
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(3).tmod = 0;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(3).pmod = struct('name', {}, 'param', {}, 'poly', {});
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(3).orth = 1;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(4).name = '_reward_vlpfc';
+                %%
+                r_vlpfc = '_reward_vlpfc';
+                %%
+                filepath_r_vlpfc = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/EVFiles/sub-"+nums(jj)+"/cardgame/run-4/"+r_vlpfc;
+                %% Set up the Import Options and import the data
+                opts = delimitedTextImportOptions("NumVariables", 3);
+
+                % Specify range and delimiter
+                opts.Delimiter = "\t";
+
+                % Specify column names and types
+                opts.VariableNames = ["VarName1", "VarName2", "VarName3"];
+                opts.VariableTypes = ["double", "double", "double"];
+                % Specify file level properties
+                opts.ExtraColumnsRule = "ignore";
+                opts.EmptyLineRule = "read";
+                file_to_read_r_vlpfc = readtable(filepath_r_vlpfc,opts);
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(4).onset = table2array(file_to_read_r_vlpfc(:,1));
+                %%
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(4).duration = table2array(file_to_read_r_rtpj(:,2));
+                %%
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(4).tmod = 0;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(4).pmod = struct('name', {}, 'param', {}, 'poly', {});
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).cond(4).orth = 1;
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).multi = {''};
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).regress = struct('name', {}, 'val', {});
+                confounds_run4 = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-"+nums(jj)+'/sub-'+nums(jj)+"_task-cardgame_run-4_desc-fslConfounds.tsv";
+                save_dir_run4 = "/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-"+nums(jj)+"/sub-"+nums(jj)+"_task-cardgame_run-4_desc-fslConfounds";
+                tsvtom(confounds_run4, save_dir_run4);
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).multi_reg = cellstr({'/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-'+nums(jj)+'/sub-'+nums(jj)+'_task-cardgame_run-4_desc-fslConfounds.mat'});
+                matlabbatch{1}.spm.stats.fmri_spec.sess(run_counter).hpf = 128;
+            end
         end
     end
     matlabbatch{1}.spm.stats.fmri_spec.fact = struct('name', {}, 'levels', {});
