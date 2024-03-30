@@ -1,0 +1,1298 @@
+%-----------------------------------------------------------------------
+% Job saved on 08-Feb-2024 14:09:01 by cfg_util (rev $Rev: 7345 $)
+% spm SPM - SPM12 (7771)
+% cfg_basicio BasicIO - Unknown
+%-----------------------------------------------------------------------
+matlabbatch{1}.spm.stats.fmri_spec.dir = {'/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-237/1stlevel_withConfounds'};
+matlabbatch{1}.spm.stats.fmri_spec.timing.units = 'secs';
+matlabbatch{1}.spm.stats.fmri_spec.timing.RT = 2;
+matlabbatch{1}.spm.stats.fmri_spec.timing.fmri_t = 16;
+matlabbatch{1}.spm.stats.fmri_spec.timing.fmri_t0 = 8;
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).scans = {
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0000.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0001.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0002.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0003.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0004.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0005.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0006.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0007.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0008.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0009.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0010.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0011.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0012.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0013.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0014.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0015.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0016.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0017.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0018.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0019.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0020.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0021.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0022.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0023.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0024.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0025.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0026.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0027.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0028.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0029.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0030.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0031.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0032.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0033.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0034.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0035.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0036.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0037.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0038.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0039.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0040.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0041.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0042.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0043.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0044.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0045.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0046.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0047.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0048.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0049.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0050.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0051.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0052.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0053.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0054.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0055.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0056.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0057.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0058.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0059.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0060.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0061.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0062.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0063.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0064.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0065.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0066.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0067.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0068.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0069.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0070.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0071.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0072.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0073.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0074.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0075.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0076.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0077.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0078.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0079.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0080.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0081.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0082.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0083.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0084.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0085.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0086.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0087.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0088.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0089.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0090.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0091.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0092.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0093.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0094.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0095.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0096.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0097.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0098.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0099.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0100.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0101.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0102.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0103.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0104.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0105.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0106.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0107.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0108.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0109.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0110.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0111.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0112.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0113.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0114.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0115.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0116.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0117.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0118.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0119.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0120.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0121.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0122.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0123.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0124.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0125.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0126.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0127.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0128.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0129.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0130.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0131.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0132.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0133.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0134.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0135.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0136.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0137.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0138.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0139.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0140.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0141.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0142.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0143.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0144.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0145.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0146.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0147.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0148.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0149.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0150.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0151.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0152.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0153.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0154.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0155.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0156.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0157.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0158.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0159.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0160.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0161.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0162.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0163.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0164.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0165.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0166.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0167.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0168.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0169.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0170.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0171.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0172.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0173.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0174.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0175.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0176.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0177.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0178.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0179.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0180.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0181.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0182.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0183.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0184.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0185.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0186.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0187.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0188.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0237.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0190.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0191.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0192.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0193.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0194.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0195.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0196.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0197.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0198.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0199.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0200.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0201.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0202.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0203.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0204.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0205.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0206.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0207.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0208.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0209.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0210.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0211.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0212.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0213.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0214.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0215.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0216.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0217.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0218.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0219.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0220.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0221.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0222.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0223.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0224.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0225.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0226.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0227.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0228.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0229.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0230.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0231.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0232.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0233.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0234.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0235.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0236.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0237.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0238.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0239.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0240.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0241.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0242.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0243.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0244.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0245.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0246.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0247.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0248.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0249.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0250.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0251.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0252.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0253.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0254.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0255.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0256.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-1_vol0257.nii,1'
+                                                    });
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(1).name = '_punish_rtpj';
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(1).onset = [147.783
+                                                            151.302
+                                                            154.822
+                                                            158.341
+                                                            161.844
+                                                            165.364
+                                                            168.867
+                                                            172.386
+                                                            443.89
+                                                            447.41
+                                                            450.912
+                                                            454.432
+                                                            457.935
+                                                            461.454
+                                                            464.974
+                                                            468.493];
+%%
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(1).duration = [2.51866541605071
+                                                               2.51869715156406
+                                                               2.51883255640047
+                                                               2.51865060614793
+                                                               2.51872112950309
+                                                               2.51875392286107
+                                                               2.5186823416613
+                                                               2.51869186231121
+                                                               2.51875392286104
+                                                               2.51873276585712
+                                                               2.51872923968727
+                                                               2.51870596698296
+                                                               2.51875956473128
+                                                               2.51910548178108
+                                                               2.51882867761327
+                                                               2.51868445735801];
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(1).tmod = 0;
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(1).pmod = struct('name', {}, 'param', {}, 'poly', {});
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(1).orth = 1;
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(2).name = '_reward_rtpj';
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(2).onset = [320.723
+                                                            324.243
+                                                            327.746
+                                                            331.249
+                                                            334.768
+                                                            338.288
+                                                            341.807
+                                                            345.327
+                                                            385.743
+                                                            389.262
+                                                            392.782
+                                                            396.301
+                                                            399.821
+                                                            403.324
+                                                            406.843
+                                                            410.363];
+%%
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(2).duration = [2.51869679894668
+                                                               2.51886252882707
+                                                               2.51869750418143
+                                                               2.51876979061961
+                                                               2.51876979061961
+                                                               2.51856738859044
+                                                               2.51864849044756
+                                                               2.51878142696989
+                                                               2.51869468325003
+                                                               2.5187176033333
+                                                               2.51882338836788
+                                                               2.51867952072246
+                                                               2.5186841047406
+                                                               2.51877225893736
+                                                               2.51874263912066
+                                                               2.51869574109463];
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(2).tmod = 0;
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(2).pmod = struct('name', {}, 'param', {}, 'poly', {});
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(2).orth = 1;
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(3).name = '_punish_vlpfc';
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(3).onset = [20.3603
+                                                            23.9154
+                                                            27.435
+                                                            30.9379
+                                                            34.4407
+                                                            37.9602
+                                                            41.463
+                                                            44.9827
+                                                            206.23
+                                                            209.75
+                                                            213.253
+                                                            216.772
+                                                            220.292
+                                                            223.811
+                                                            227.331
+                                                            230.834];
+%%
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(3).duration = [2.55433612840995
+                                                               2.51878953715414
+                                                               2.51881245724484
+                                                               2.51870808267966
+                                                               2.51875074931234
+                                                               2.51868093118816
+                                                               2.51876132781431
+                                                               2.51868727829308
+                                                               2.51874616529048
+                                                               2.51871337193251
+                                                               2.5190152123714
+                                                               2.51870314604417
+                                                               2.51856950429084
+                                                               2.51879130024091
+                                                               2.51875921211391
+                                                               2.51876838014647];
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(3).tmod = 0;
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(3).pmod = struct('name', {}, 'param', {}, 'poly', {});
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(3).orth = 1;
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(4).name = '_reward_vlpfc';
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(4).onset = [83.1135
+                                                            86.6165
+                                                            90.1193
+                                                            93.6223
+                                                            97.1416
+                                                            100.645
+                                                            104.164
+                                                            107.684
+                                                            262.393
+                                                            265.912
+                                                            269.432
+                                                            272.934
+                                                            276.454
+                                                            279.973
+                                                            283.476
+                                                            286.996];
+%%
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(4).duration = [2.51868692567572
+                                                               2.51865554278343
+                                                               2.51865730587021
+                                                               2.51863227007911
+                                                               2.51875815426558
+                                                               2.51873629202321
+                                                               2.51874440220743
+                                                               2.52373093647807
+                                                               2.51880963631345
+                                                               2.51870561436567
+                                                               2.518651664
+                                                               2.51873135538767
+                                                               2.51878847930209
+                                                               2.51905964159965
+                                                               2.51873840772731
+                                                               2.51868093118816];
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(4).tmod = 0;
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(4).pmod = struct('name', {}, 'param', {}, 'poly', {});
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(4).orth = 1;
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).multi = {''};
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).regress = struct('name', {}, 'val', {});
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).multi_reg = {'/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-237/sub-237_task-cardgame_run-1_desc-fslConfounds.mat'};
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).hpf = Inf;
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).scans = {
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0000.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0001.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0002.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0003.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0004.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0005.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0006.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0007.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0008.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0009.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0010.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0011.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0012.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0013.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0014.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0015.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0016.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0017.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0018.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0019.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0020.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0021.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0022.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0023.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0024.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0025.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0026.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0027.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0028.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0029.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0030.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0031.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0032.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0033.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0034.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0035.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0036.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0037.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0038.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0039.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0040.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0041.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0042.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0043.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0044.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0045.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0046.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0047.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0048.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0049.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0050.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0051.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0052.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0053.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0054.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0055.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0056.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0057.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0058.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0059.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0060.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0061.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0062.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0063.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0064.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0065.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0066.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0067.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0068.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0069.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0070.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0071.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0072.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0073.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0074.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0075.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0076.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0077.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0078.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0079.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0080.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0081.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0082.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0083.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0084.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0085.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0086.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0087.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0088.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0089.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0090.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0091.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0092.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0093.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0094.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0095.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0096.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0097.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0098.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0099.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0100.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0101.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0102.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0103.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0104.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0105.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0106.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0107.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0108.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0109.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0110.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0111.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0112.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0113.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0114.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0115.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0116.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0117.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0118.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0119.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0120.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0121.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0122.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0123.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0124.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0125.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0126.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0127.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0128.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0129.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0130.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0131.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0132.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0133.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0134.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0135.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0136.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0137.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0138.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0139.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0140.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0141.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0142.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0143.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0144.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0145.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0146.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0147.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0148.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0149.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0150.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0151.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0152.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0153.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0154.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0155.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0156.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0157.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0158.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0159.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0160.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0161.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0162.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0163.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0164.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0165.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0166.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0167.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0168.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0169.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0170.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0171.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0172.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0173.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0174.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0175.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0176.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0177.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0178.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0179.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0180.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0181.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0182.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0183.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0184.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0185.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0186.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0187.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0188.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0237.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0190.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0191.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0192.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0193.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0194.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0195.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0196.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0197.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0198.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0199.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0200.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0201.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0202.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0203.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0204.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0205.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0206.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0207.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0208.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0209.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0210.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0211.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0212.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0213.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0214.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0215.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0216.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0217.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0218.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0219.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0220.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0221.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0222.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0223.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0224.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0225.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0226.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0227.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0228.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0229.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0230.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0231.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0232.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0233.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0234.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0235.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0236.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0237.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0238.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0239.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0240.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0241.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0242.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0243.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0244.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0245.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0246.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0247.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0248.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0249.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0250.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0251.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0252.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0253.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0254.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0255.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0256.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-2_vol0257.nii,1'
+                                                    };
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(1).name = '_punish_rtpj';
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(1).onset = [20.2731
+                                                            23.7888
+                                                            27.2917
+                                                            30.8113
+                                                            34.3308
+                                                            37.8503
+                                                            41.3699
+                                                            44.8893
+                                                            146.305
+                                                            149.825
+                                                            153.344
+                                                            156.864
+                                                            160.383
+                                                            163.903
+                                                            167.422
+                                                            170.942];
+%%
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(1).duration = [2.51501054324582
+                                                               2.51885653434321
+                                                               2.51883361425251
+                                                               2.51873029753938
+                                                               2.51872183473781
+                                                               2.51870032511651
+                                                               2.51880293659121
+                                                               2.51871372454986
+                                                               2.51879799995572
+                                                               2.51882374098525
+                                                               2.51862274942545
+                                                               2.51869856202975
+                                                               2.51881668864564
+                                                               2.51867458408697
+                                                               2.51870949314909
+                                                               2.52377783450781];
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(1).tmod = 0;
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(1).pmod = struct('name', {}, 'param', {}, 'poly', {});
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(1).orth = 1;
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(2).name = '_reward_rtpj';
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(2).onset = [81.4357
+                                                            84.9386
+                                                            88.4414
+                                                            91.9609
+                                                            95.4638
+                                                            98.9833
+                                                            102.503
+                                                            106.022
+                                                            330.622
+                                                            334.124
+                                                            337.644
+                                                            341.163
+                                                            344.683
+                                                            348.202
+                                                            351.722
+                                                            355.225];
+%%
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(2).duration = [2.51875074931235
+                                                               2.51879059500619
+                                                               2.51872430305183
+                                                               2.51879553163798
+                                                               2.51867775763571
+                                                               2.51869574109465
+                                                               2.51888544891776
+                                                               2.51864461166412
+                                                               2.51879799995947
+                                                               2.51877014323321
+                                                               2.51878883191944
+                                                               2.5188128098622
+                                                               2.51867811025681
+                                                               2.5187147824019
+                                                               2.51875427548214
+                                                               2.51883114593477];
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(2).tmod = 0;
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(2).pmod = struct('name', {}, 'param', {}, 'poly', {});
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(2).orth = 1;
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(3).name = '_punish_vlpfc';
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(3).onset = [211.024
+                                                            214.527
+                                                            218.047
+                                                            221.566
+                                                            225.086
+                                                            228.605
+                                                            232.125
+                                                            235.644
+                                                            394.941
+                                                            398.46
+                                                            401.98
+                                                            405.499
+                                                            409.019
+                                                            412.538
+                                                            416.058
+                                                            419.577];
+%%
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(3).duration = [2.51872782921791
+                                                               2.51873558678849
+                                                               2.51873276585712
+                                                               2.51867070530355
+                                                               2.51866788437218
+                                                               2.5187295923084
+                                                               2.5187197190337
+                                                               2.51873382370547
+                                                               2.51850285971909
+                                                               2.51868128380926
+                                                               2.51838508572428
+                                                               2.51859736101704
+                                                               2.51852013794331
+                                                               2.51877402201671
+                                                               2.51871478239821
+                                                               2.51869362539054];
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(3).tmod = 0;
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(3).pmod = struct('name', {}, 'param', {}, 'poly', {});
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(3).orth = 1;
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(4).name = '_reward_vlpfc';
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(4).onset = [266.653
+                                                            270.172
+                                                            273.692
+                                                            277.212
+                                                            280.731
+                                                            284.234
+                                                            287.754
+                                                            291.273
+                                                            454.739
+                                                            458.259
+                                                            461.778
+                                                            465.298
+                                                            468.817
+                                                            472.337
+                                                            475.856
+                                                            479.376];
+%%
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(4).duration = [2.51875321763009
+                                                               2.51868128380926
+                                                               2.52377466095909
+                                                               2.51868833614139
+                                                               2.51866224249824
+                                                               2.51857937755807
+                                                               2.51858149326216
+                                                               2.51874722314255
+                                                               2.51882585668562
+                                                               2.51881527817994
+                                                               2.51870526174827
+                                                               2.51863896979393
+                                                               2.51869292015954
+                                                               2.51872782921788
+                                                               2.51868304688855
+                                                               2.51914603270961];
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(4).tmod = 0;
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(4).pmod = struct('name', {}, 'param', {}, 'poly', {});
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(4).orth = 1;
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).multi = {''};
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).regress = struct('name', {}, 'val', {});
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).multi_reg = {'/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-237/sub-237_task-cardgame_run-2_desc-fslConfounds.mat'};
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).hpf = Inf;
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).scans = {
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0000.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0001.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0002.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0003.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0004.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0005.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0006.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0007.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0008.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0009.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0010.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0011.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0012.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0013.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0014.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0015.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0016.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0017.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0018.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0019.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0020.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0021.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0022.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0023.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0024.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0025.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0026.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0027.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0028.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0029.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0030.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0031.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0032.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0033.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0034.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0035.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0036.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0037.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0038.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0039.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0040.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0041.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0042.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0043.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0044.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0045.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0046.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0047.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0048.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0049.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0050.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0051.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0052.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0053.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0054.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0055.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0056.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0057.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0058.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0059.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0060.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0061.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0062.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0063.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0064.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0065.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0066.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0067.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0068.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0069.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0070.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0071.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0072.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0073.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0074.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0075.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0076.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0077.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0078.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0079.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0080.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0081.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0082.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0083.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0084.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0085.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0086.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0087.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0088.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0089.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0090.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0091.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0092.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0093.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0094.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0095.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0096.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0097.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0098.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0099.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0100.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0101.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0102.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0103.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0104.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0105.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0106.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0107.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0108.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0109.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0110.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0111.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0112.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0113.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0114.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0115.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0116.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0117.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0118.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0119.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0120.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0121.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0122.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0123.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0124.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0125.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0126.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0127.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0128.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0129.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0130.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0131.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0132.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0133.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0134.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0135.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0136.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0137.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0138.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0139.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0140.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0141.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0142.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0143.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0144.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0145.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0146.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0147.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0148.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0149.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0150.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0151.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0152.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0153.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0154.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0155.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0156.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0157.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0158.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0159.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0160.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0161.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0162.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0163.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0164.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0165.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0166.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0167.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0168.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0169.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0170.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0171.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0172.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0173.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0174.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0175.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0176.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0177.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0178.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0179.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0180.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0181.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0182.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0183.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0184.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0185.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0186.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0187.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0188.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0237.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0190.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0191.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0192.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0193.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0194.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0195.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0196.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0197.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0198.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0199.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0200.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0201.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0202.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0203.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0204.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0205.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0206.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0207.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0208.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0209.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0210.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0211.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0212.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0213.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0214.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0215.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0216.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0217.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0218.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0219.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0220.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0221.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0222.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0223.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0224.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0225.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0226.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0227.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0228.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0229.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0230.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0231.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0232.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0233.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0234.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0235.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0236.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0237.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0238.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0239.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0240.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0241.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0242.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0243.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0244.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0245.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0246.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0247.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0248.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0249.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0250.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0251.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0252.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0253.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0254.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0255.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0256.nii,1'
+                                                    '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-237/func/sub-237_task-cardgame_run-3_vol0257.nii,1'
+                                                    };
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(1).name = '_punish_rtpj';
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(1).onset = [373.064
+                                                            376.584
+                                                            380.086
+                                                            383.606
+                                                            387.126
+                                                            390.645
+                                                            394.165
+                                                            397.667
+                                                            431.362
+                                                            434.881
+                                                            438.401
+                                                            441.92
+                                                            445.44
+                                                            448.959
+                                                            452.479
+                                                            455.998];
+%%
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(1).duration = [2.518841019202
+                                                               2.5237640824571
+                                                               2.51877331678571
+                                                               2.51872712398693
+                                                               2.51873276585718
+                                                               2.51877402202041
+                                                               2.51845384598897
+                                                               2.51866365296763
+                                                               2.51869609371198
+                                                               2.51876908538122
+                                                               2.51872641875593
+                                                               2.51889355910197
+                                                               2.51876379613208
+                                                               2.51883502471821
+                                                               2.51871090361846
+                                                               2.51855963102355];
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(1).tmod = 0;
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(1).pmod = struct('name', {}, 'param', {}, 'poly', {});
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(1).orth = 1;
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(2).name = '_reward_rtpj';
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(2).onset = [138.04
+                                                            141.559
+                                                            145.079
+                                                            148.582
+                                                            152.101
+                                                            155.621
+                                                            159.14
+                                                            162.66
+                                                            193.401
+                                                            196.921
+                                                            200.44
+                                                            203.96
+                                                            207.479
+                                                            210.999
+                                                            214.519
+                                                            218.038];
+%%
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(2).duration = [2.51872712398691
+                                                               2.51871160884946
+                                                               2.51870737744866
+                                                               2.51876838014647
+                                                               2.51886534976214
+                                                               2.51867105791717
+                                                               2.51866259511559
+                                                               2.51875427548214
+                                                               2.5186689422205
+                                                               2.51877402202041
+                                                               2.51874369697646
+                                                               2.51878354267032
+                                                               2.51879094762356
+                                                               2.518869933784
+                                                               2.51873840772734
+                                                               2.51870773006604];
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(2).tmod = 0;
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(2).pmod = struct('name', {}, 'param', {}, 'poly', {});
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(2).orth = 1;
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(3).name = '_punish_vlpfc';
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(3).onset = [257.704
+                                                            261.223
+                                                            264.726
+                                                            268.246
+                                                            271.765
+                                                            275.285
+                                                            278.788
+                                                            282.307
+                                                            315.134
+                                                            318.653
+                                                            322.173
+                                                            325.692
+                                                            329.212
+                                                            332.715
+                                                            336.234
+                                                            339.754];
+%%
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(3).duration = [2.51876767491552
+                                                               2.51871866118159
+                                                               2.51919257811829
+                                                               2.51844432533534
+                                                               2.51868410474435
+                                                               2.51870349866522
+                                                               2.51838297002388
+                                                               2.51875956472753
+                                                               2.51880893107875
+                                                               2.51867634717001
+                                                               2.51876026996223
+                                                               2.51873170800508
+                                                               2.51870878791436
+                                                               2.51874863360825
+                                                               2.51875392286109
+                                                               2.5186209863424];
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(3).tmod = 0;
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(3).pmod = struct('name', {}, 'param', {}, 'poly', {});
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(3).orth = 1;
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(4).name = '_reward_vlpfc';
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(4).onset = [20.2966
+                                                            23.7969
+                                                            27.3165
+                                                            30.8361
+                                                            34.3555
+                                                            37.8583
+                                                            41.3612
+                                                            44.8807
+                                                            79.8925
+                                                            83.412
+                                                            86.9316
+                                                            90.4512
+                                                            93.9706
+                                                            97.4902
+                                                            101.01
+                                                            104.529];
+%%
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(4).duration = [2.51629195258021
+                                                               2.51870349866897
+                                                               2.5187578016445
+                                                               2.51871725071594
+                                                               2.51878742145747
+                                                               2.51881774649397
+                                                               2.51873417632282
+                                                               2.51874087603763
+                                                               2.51879835257306
+                                                               2.5188085784614
+                                                               2.51872994492203
+                                                               2.51861710755527
+                                                               2.51877754818275
+                                                               2.51874687052518
+                                                               2.51868904137611
+                                                               2.52373869404869];
+%%
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(4).tmod = 0;
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(4).pmod = struct('name', {}, 'param', {}, 'poly', {});
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(4).orth = 1;
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).multi = {''};
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).regress = struct('name', {}, 'val', {});
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).multi_reg = {'/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-237/sub-237_task-cardgame_run-3_desc-fslConfounds.mat'};
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).hpf = Inf;
+matlabbatch{1}.spm.stats.fmri_spec.fact = struct('name', {}, 'levels', {});
+matlabbatch{1}.spm.stats.fmri_spec.bases.hrf.derivs = [0 0];
+matlabbatch{1}.spm.stats.fmri_spec.volt = 1;
+matlabbatch{1}.spm.stats.fmri_spec.global = 'None';
+matlabbatch{1}.spm.stats.fmri_spec.mthresh = 0.8;
+matlabbatch{1}.spm.stats.fmri_spec.mask = {''};
+matlabbatch{1}.spm.stats.fmri_spec.cvi = 'AR(1)';
+matlabbatch{2}.spm.stats.fmri_est.spmmat = {'/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-237/1stlevel_withConfounds/SPM.mat'};
+matlabbatch{2}.spm.stats.fmri_est.write_residuals = 0;
+matlabbatch{2}.spm.stats.fmri_est.method.Classical = 1;

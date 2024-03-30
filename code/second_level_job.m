@@ -14,6 +14,8 @@ for jj=1:length(contrasts)
         [status, msg, msgID] = mkdir(savedir);
         if status~=1
             mkdir(savedir);
+        elseif status == 1
+            delete(fullfile(savedir, '*'))
         end
 end
 for ii=1:length(contrasts)
@@ -28,24 +30,19 @@ for ii=1:length(contrasts)
                                                               '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-209/1stlevel_withConfounds/con_000'+contrasts(ii)+'.nii,1'
                                                               '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-210/1stlevel_withConfounds/con_000'+contrasts(ii)+'.nii,1'
                                                               '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-211/1stlevel_withConfounds/con_000'+contrasts(ii)+'.nii,1'
-                                                              '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-212/1stlevel_withConfounds/con_000'+contrasts(ii)+'.nii,1'
                                                               '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-213/1stlevel_withConfounds/con_000'+contrasts(ii)+'.nii,1'
                                                               '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-214/1stlevel_withConfounds/con_000'+contrasts(ii)+'.nii,1'
                                                               '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-215/1stlevel_withConfounds/con_000'+contrasts(ii)+'.nii,1'
                                                               '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-216/1stlevel_withConfounds/con_000'+contrasts(ii)+'.nii,1'
                                                               '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-217/1stlevel_withConfounds/con_000'+contrasts(ii)+'.nii,1'
-                                                              '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-218/1stlevel_withConfounds/con_000'+contrasts(ii)+'.nii,1'
                                                               '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-219/1stlevel_withConfounds/con_000'+contrasts(ii)+'.nii,1'
                                                               '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-220/1stlevel_withConfounds/con_000'+contrasts(ii)+'.nii,1'
                                                               '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-221/1stlevel_withConfounds/con_000'+contrasts(ii)+'.nii,1'
                                                               '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-222/1stlevel_withConfounds/con_000'+contrasts(ii)+'.nii,1'
-                                                              '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-223/1stlevel_withConfounds/con_000'+contrasts(ii)+'.nii,1'
-                                                              '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-224/1stlevel_withConfounds/con_000'+contrasts(ii)+'.nii,1'
                                                               '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-225/1stlevel_withConfounds/con_000'+contrasts(ii)+'.nii,1'
                                                               '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-226/1stlevel_withConfounds/con_000'+contrasts(ii)+'.nii,1'
                                                               '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-227/1stlevel_withConfounds/con_000'+contrasts(ii)+'.nii,1'
                                                               '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-228/1stlevel_withConfounds/con_000'+contrasts(ii)+'.nii,1'
-                                                              '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-229/1stlevel_withConfounds/con_000'+contrasts(ii)+'.nii,1'
                                                               '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-230/1stlevel_withConfounds/con_000'+contrasts(ii)+'.nii,1'
                                                               '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-231/1stlevel_withConfounds/con_000'+contrasts(ii)+'.nii,1'
                                                               '/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-232/1stlevel_withConfounds/con_000'+contrasts(ii)+'.nii,1'

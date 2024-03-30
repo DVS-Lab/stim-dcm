@@ -1,8 +1,38 @@
-%-----------------------------------------------------------------------
-% Job saved on 17-Oct-2023 16:11:05 by cfg_util (rev $Rev: 7345 $)
-% spm SPM - SPM12 (7771)
-% cfg_basicio BasicIO - Unknown
-%-----------------------------------------------------------------------
+%% Script for running individual level stats across subs in SPM
+% Changes that need to be made:
+%   -Replace sub IDs with var
+%   -Replace EV onsets & durations with var
+%   -Question: can batch & contrasts be in the same script? Need to find
+%   out
+
+%% Convert confounds from .tsv to .mat
+
+R=readtable("/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-189/sub-189_task-cardgame_run-1_desc-fslConfounds.tsv", "FileType","text","Delimiter","\t");
+for i=1:size(R(1,:),2)
+    R.Properties.VariableNames(i) = "R"+i;
+    R=table2array(R);
+end
+save("/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub189_run1_confounds.mat", "R");
+clear
+
+R=readtable("/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-189/sub-189_task-cardgame_run-2_desc-fslConfounds.tsv", "FileType","text","Delimiter","\t");
+for i=1:size(R(1,:),2)
+    R.Properties.VariableNames(i) = "R"+i;
+    R=table2array(R);
+end
+save("/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub189_run2_confounds.mat", "R");
+clear
+
+R=readtable("/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-189/sub-189_task-cardgame_run-3_desc-fslConfounds.tsv", "FileType","text","Delimiter","\t");
+for i=1:size(R(1,:),2)
+    R.Properties.VariableNames(i) = "R"+i;
+    R=table2array(R);
+end
+save("/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub189_run3_confounds.mat", "R");
+clear
+
+%% Run batch
+
 matlabbatch{1}.spm.stats.fmri_spec.dir = {'/ZPOOL/data/projects/stim-dcm/derivatives/spm/sub-189/1stlevel_withConfounds'};
 matlabbatch{1}.spm.stats.fmri_spec.timing.units = 'secs';
 matlabbatch{1}.spm.stats.fmri_spec.timing.RT = 2;
@@ -432,8 +462,8 @@ matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(4).pmod = struct('name', {}, 'pa
 matlabbatch{1}.spm.stats.fmri_spec.sess(1).cond(4).orth = 1;
 matlabbatch{1}.spm.stats.fmri_spec.sess(1).multi = {''};
 matlabbatch{1}.spm.stats.fmri_spec.sess(1).regress = struct('name', {}, 'val', {});
-matlabbatch{1}.spm.stats.fmri_spec.sess(1).multi_reg = {'/ZPOOL/data/projects/stim-dcm/code/sub189_run1_confounds.mat'};
-matlabbatch{1}.spm.stats.fmri_spec.sess(1).hpf = 128;
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).multi_reg = {'/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-189/sub189_run1_confounds.mat'};
+matlabbatch{1}.spm.stats.fmri_spec.sess(1).hpf = Inf;
 %%
 matlabbatch{1}.spm.stats.fmri_spec.sess(2).scans = {
                                                     '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-189/func/sub-189_task-cardgame_run-2_vol0000.nii,1'
@@ -858,8 +888,8 @@ matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(4).pmod = struct('name', {}, 'pa
 matlabbatch{1}.spm.stats.fmri_spec.sess(2).cond(4).orth = 1;
 matlabbatch{1}.spm.stats.fmri_spec.sess(2).multi = {''};
 matlabbatch{1}.spm.stats.fmri_spec.sess(2).regress = struct('name', {}, 'val', {});
-matlabbatch{1}.spm.stats.fmri_spec.sess(2).multi_reg = {'/ZPOOL/data/projects/stim-dcm/code/sub189_run2_confounds.mat'};
-matlabbatch{1}.spm.stats.fmri_spec.sess(2).hpf = 128;
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).multi_reg = {'/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-189/sub189_run2_confounds.mat'};
+matlabbatch{1}.spm.stats.fmri_spec.sess(2).hpf = Inf;
 %%
 matlabbatch{1}.spm.stats.fmri_spec.sess(3).scans = {
                                                     '/ZPOOL/data/projects/stim-dcm/derivatives/fmriprep/sub-189/func/sub-189_task-cardgame_run-3_vol0000.nii,1'
@@ -1284,8 +1314,8 @@ matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(4).pmod = struct('name', {}, 'pa
 matlabbatch{1}.spm.stats.fmri_spec.sess(3).cond(4).orth = 1;
 matlabbatch{1}.spm.stats.fmri_spec.sess(3).multi = {''};
 matlabbatch{1}.spm.stats.fmri_spec.sess(3).regress = struct('name', {}, 'val', {});
-matlabbatch{1}.spm.stats.fmri_spec.sess(3).multi_reg = {'/ZPOOL/data/projects/stim-dcm/code/sub189_run3_confounds.mat'};
-matlabbatch{1}.spm.stats.fmri_spec.sess(3).hpf = 128;
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).multi_reg = {'/ZPOOL/data/projects/stim-dcm/derivatives/spm/confounds/sub-189/sub189_run3_confounds.mat'};
+matlabbatch{1}.spm.stats.fmri_spec.sess(3).hpf = Inf;
 matlabbatch{1}.spm.stats.fmri_spec.fact = struct('name', {}, 'levels', {});
 matlabbatch{1}.spm.stats.fmri_spec.bases.hrf.derivs = [0 0];
 matlabbatch{1}.spm.stats.fmri_spec.volt = 1;
