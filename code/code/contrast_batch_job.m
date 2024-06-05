@@ -14,13 +14,13 @@ for jj=1:length(nums)
     matlabbatch{1}.spm.stats.con.consess{1}.tcon.name = 'R_vlpfc';
     matlabbatch{1}.spm.stats.con.consess{1}.tcon.weights = [0 0 0 1/3];
     matlabbatch{1}.spm.stats.con.consess{1}.tcon.sessrep = 'repl';
-    matlabbatch{1}.spm.stats.con.consess{2}.tcon.name = 'R_rtpj';
+    matlabbatch{1}.spm.stats.con.consess{2}.tcon.name = 'R_vs';
     matlabbatch{1}.spm.stats.con.consess{2}.tcon.weights = [0 1/3 0 0];
     matlabbatch{1}.spm.stats.con.consess{2}.tcon.sessrep = 'repl';
     matlabbatch{1}.spm.stats.con.consess{3}.tcon.name = 'P_vlpfc';
     matlabbatch{1}.spm.stats.con.consess{3}.tcon.weights = [0 0 1/3 0];
     matlabbatch{1}.spm.stats.con.consess{3}.tcon.sessrep = 'repl';
-    matlabbatch{1}.spm.stats.con.consess{4}.tcon.name = 'P_rtpj';
+    matlabbatch{1}.spm.stats.con.consess{4}.tcon.name = 'P_vs';
     matlabbatch{1}.spm.stats.con.consess{4}.tcon.weights = [1/3 0 0 0];
     matlabbatch{1}.spm.stats.con.consess{4}.tcon.sessrep = 'repl';
     matlabbatch{1}.spm.stats.con.consess{5}.tcon.name = 'R>P';
@@ -38,6 +38,12 @@ for jj=1:length(nums)
     matlabbatch{1}.spm.stats.con.consess{9}.tcon.name = 'interaction';
     matlabbatch{1}.spm.stats.con.consess{9}.tcon.weights = [1/3 -1/3 -1/3 1/3];
     matlabbatch{1}.spm.stats.con.consess{9}.tcon.sessrep = 'repl';
+    matlabbatch{1}.spm.stats.con.consess{10}.fcon.name = 'f contrast';
+    matlabbatch{1}.spm.stats.con.consess{10}.fcon.weights = [1 0 0 0
+                                                            0 1 0 0
+                                                            0 0 1 0
+                                                            0 0 0 1];
+    matlabbatch{1}.spm.stats.con.consess{10}.fcon.sessrep = 'repl';
     matlabbatch{1}.spm.stats.con.delete = 1;
     spm('defaults', 'FMRI');
     spm_jobman('run', matlabbatch);
