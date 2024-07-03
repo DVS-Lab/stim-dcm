@@ -10,7 +10,7 @@ spm fmri
 %   -Replace EV onsets & durations with var
 %   -Question: can batch & contrasts be in the same script? Need to find
 %   out
-%test
+
 
 
 %% Code for stats:
